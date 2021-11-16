@@ -1,0 +1,55 @@
+.container {
+  max-width: 75%;
+}
+.review {
+  padding: 24px, 32px;
+  text-align: center;
+}
+
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+#person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+#author {
+  margin-bottom: .5%;
+  font-size: 20px;
+}
+#job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+#review-info {
+  margin-bottom: 16px;
+  max-width: 50%;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.prev-btn,
+.next-btn {
+  color: white;
+  font-size: 20px;
+  background: transparent;
+  border-color: transparent;
+  margin: 20px 8px;
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: #6e7274;
+}
