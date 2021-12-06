@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION["info"]["username"])) {
   $_SESSION['msg'] = "You must log in first";
   header('location: login.php');
 }
@@ -29,18 +29,20 @@ if (isset($_GET['logout'])) {
   <main id = "main-body">
     <header>
     <?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
+      <div class="error success" align=center>
       	<h3>
           <?php 
           	echo $_SESSION['success']; 
           	unset($_SESSION['success']);
+            echo '<p class="time"> ' . $_SESSION['time'] . ' </p>';
+            unset($_SESSION['time']);
           ?>
       	</h3>
       </div>
   	<?php endif ?>
-    <?php  if (isset($_SESSION['username'])) : ?>
+    <?php  if (isset($_SESSION["info"]["username"])) : ?>
       <div class="logging">
-        <p>Salut, <strong><?php echo $_SESSION['username']; ?></strong></p>
+        <p>Salut, <strong><?php echo $_SESSION["info"]["username"]; ?></strong></p>
     	  <p class="logout"> <a href="index.php?logout='1'">Log out</a> </p>
       </div>
     <?php endif ?>

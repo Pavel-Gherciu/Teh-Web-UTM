@@ -33,60 +33,42 @@
     </header>
     <div class="logform">
       <div class="logform_title">Contact</div>
-      <?php include('validation.php') ?>
-      <form method ="post" name="contactForm" enctype="multipart/form-data">
+      <form id="contactform">
         <div class="logform_div">
           <label for="name" class="logform_label">Nume</label>
           <input type="text" name="name" class="logform_input" placeholder="Nume"  required>
-          <?php if(isset($name_error)) {?>
-            <p class="form_error"><?php echo $name_error ?></p>
-          <?php } ?>
+          <label class="msg-name msg"></label>   
         </div>
         <div class="logform_div">
           <label for="email" class="logform_label">E-mail</label>
           <input type="text" name="email" class="logform_input" placeholder="E-mail" required>
-          <?php if(isset($email_error)) {?>
-            <p class="form_error"><?php echo $email_error ?></p>
-          <?php } ?>
+          <label class="msg-email msg"></label>
         </div>
         <div class="logform_div">
           <label for="phone" class="logform_label">Telefon</label>
           <input type="text" name="phone" class="logform_input" placeholder="Telefon" required>
-          <?php if(isset($phone_error)) {?>
-            <p class="form_error"><?php echo $phone_error ?></p>
-          <?php } ?>
+          <label class="msg-phone msg"></label>
         </div>
         <div class="logform_div">
           <label for="subject" class="logform_label">Subiect</label>
           <input type="text" name="subject" class="logform_input" placeholder="Subiect" required>
-          <?php if(isset($subject_error)) {?>
-            <p class="form_error"><?php echo $subject_error ?></p>
-          <?php } ?>
+          <label class="msg-subject msg"></label>
         </div>
         <div class="logform_div">
           <label for="message" class="logform_label">Mesaj</label>
           <textarea type="text" name="message" class="logform_text" placeholder="Mesaj" rows="4" cols="2" required></textarea>
-          <?php if(isset($message_error)) {?>
-            <p class="form_error"><?php echo $message_error ?></p>
-          <?php } ?>
+          <label class="msg-message msg"></label>
         </div>
-        <?php
-          include('contact_form.php');
-        ?>
-        <?php if(!empty($response)) {?>
-          <div class="logform_div <?php echo $response['status']; ?>" role="alert">
-            <?php 
-            if(count($errors) == 0) {
-              echo $response['message'];
-            }?>
-          </div>
-        <?php }?>
-        <button type="submit" class="logform_button" align=center name="send" value="Send">Trimite</button>
+        <p class="msg_success logform_div"></p>        
+        <p class="msg_fail logform_div"></p>
+        <input type="submit" class="logform_button" align=center id="contact-btn" value="Trimite"></input>
       </form>
     </div>
   </main>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.js"></script>    
   <script src="../js/contact_valid.js"></script>
 </body>
 </html>

@@ -101,3 +101,24 @@ textarea {
   border: 1px solid white;
   font-family: "Myriad Pro";
 }
+
+.error{
+  color: red;
+  display: block;
+  white-space: pre-line;
+} 
+
+.error-1{
+  color: red;
+  white-space: pre-line;
+  border: 2px solid red !important;
+} 
+
+.msg{
+  color: red;
+  display: none;
+}
+
+.msg_success{
+  display:none;
+}
