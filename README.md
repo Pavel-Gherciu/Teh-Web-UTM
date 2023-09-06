@@ -4,3 +4,5 @@ In particular the site is fully written in Romanian language and requires users 
 
 Written with PHP and JS (bit of JQuery), ran using XAMPP/phpMyAdmin.
 
+Branches 1-6 show the progress stages until the final product is done.
+
